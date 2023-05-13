@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ArticlesListViewController" customModule="NY_Times_Articles" customModuleProvider="target">
             <connections>
+                <outlet property="articlesTableView" destination="nfD-ay-8ay" id="XGm-la-5eg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,16 +18,19 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phd-QR-UjA">
-                    <rect key="frame" x="209" y="284" width="42" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="nfD-ay-8ay">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" red="0.78039215689999997" green="0.14117647059999999" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nfD-ay-8ay" secondAttribute="trailing" id="3CA-R1-aTi"/>
+                <constraint firstItem="nfD-ay-8ay" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="mCB-od-fzT"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="nfD-ay-8ay" secondAttribute="bottom" id="ppa-9z-VNp"/>
+                <constraint firstItem="nfD-ay-8ay" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="qcF-0B-phq"/>
+            </constraints>
             <point key="canvasLocation" x="58" y="21"/>
         </view>
     </objects>
