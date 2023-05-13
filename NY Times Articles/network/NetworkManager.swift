@@ -10,7 +10,7 @@ import Foundation
 
 class NetworkManager {
     
-    func makeRequest(httpMethod: String, url: String, postParameters: [String: Any] ) async -> (data: Data, urlResponse: URLResponse)  {
+    func makeRequest(httpMethod: String, url: String, postParameters: [String: Any]? ) async -> (data: Data, urlResponse: URLResponse)  {
         let session = URLSession(configuration: URLSessionConfiguration.default, delegate: nil, delegateQueue: nil)
         var request = URLRequest(url: URL(string: url)!)
         request.httpMethod = httpMethod

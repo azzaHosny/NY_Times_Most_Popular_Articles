@@ -6,6 +6,13 @@
 //
 
 import Foundation
+
 struct ArticleUIModel {
+    
     let title: String
+    let abstract: String
+    let publishedDate: String
+    let byline: String
+    let articleUrl: String
+    let section: String
 }

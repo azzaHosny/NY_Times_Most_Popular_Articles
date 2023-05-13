@@ -11,7 +11,7 @@ protocol ArticlesListUseCaseProtocol {
 }
 
 class ArticlesListUseCase: ArticlesListUseCaseProtocol {
-
+    
     func buildArticlesList(repo: ArticlesListRepo, dayNum: Int) async -> Result<[ArticleUIModel], Error> {
         let result = await repo.getArticlesList(dayNum: dayNum)
         switch result {
@@ -21,11 +21,18 @@ class ArticlesListUseCase: ArticlesListUseCaseProtocol {
             return .failure(error)
         }
     }
-
+    
 }
 
 class Adapter {
     class func transfer(response: ArticlesListResponse) -> [ArticleUIModel] {
-        response.results?.map({ArticleUIModel(title: $0.title ?? "")}) ?? []
+        response.results?
+            .map({
+                ArticleUIModel(title: $0.title ?? "",
+                               abstract: $0.abstract ?? "",
+                               publishedDate: $0.published_date ?? "",
+                               byline: $0.byline ?? "",
+                               articleUrl: $0.url ?? "",
+                               section:  $0.section ?? "")}) ?? []
     }
 }
