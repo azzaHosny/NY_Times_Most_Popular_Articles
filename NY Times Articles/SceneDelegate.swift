@@ -15,12 +15,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
-        let viewController = ArticlesListViewController()
-        let navigationController = UINavigationController(rootViewController: viewController)
+        let navigationController = UINavigationController()
         window.rootViewController = navigationController
         self.window = window
-//        LoginCordinator.init(navigationController: navigationController).start()
-        
+        ArticlesListCoordinator.init(navigationController: navigationController).start()
         window.makeKeyAndVisible()
     }
 
