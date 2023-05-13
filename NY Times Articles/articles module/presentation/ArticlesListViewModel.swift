@@ -13,6 +13,7 @@ enum screenState {
 }
 class ArticlesListViewModel {
     var articlesList: [ArticleUIModel] = []
+    var errorSescription: String? = nil
     let coordinator: ArticlesListCoordinatorProtocol
     let repo: ArticlesListRepo
     let useCase: ArticlesListUseCaseProtocol
@@ -23,18 +24,19 @@ class ArticlesListViewModel {
         self.useCase = useCase
     }
     
-    func viewDidLoad()  {
-        Task {
-           let result = await useCase.buildArticlesList(repo: repo, dayNum: 7)
+    func viewDidLoad() async  {
+        let result = await useCase.buildArticlesList(repo: repo, dayNum: .seven)
             switch result {
             case .success(let list):
                 await MainActor.run {
+                    errorSescription = nil
                     articlesList = list
                     bindScreenStatusToViewController?(.sucsess)
                 }
             case .failure(let failure):
+                errorSescription = failure.localizedDescription
                 bindScreenStatusToViewController?(.failure(failure))
             }
-        }
+        
     }
 }

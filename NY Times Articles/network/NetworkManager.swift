@@ -7,16 +7,18 @@
 
 import Foundation
 
-
 class NetworkManager {
     
-    func makeRequest(httpMethod: String, url: String, postParameters: [String: Any]? ) async -> (data: Data, urlResponse: URLResponse)  {
+    func makeRequest<T: Codable>(type: T.Type, httpMethod: String, url: String, postParameters: [String: Any]? , decoder:  CustomDecoderProtocol) async throws -> Result<T,Error>  {
         let session = URLSession(configuration: URLSessionConfiguration.default, delegate: nil, delegateQueue: nil)
         var request = URLRequest(url: URL(string: url)!)
         request.httpMethod = httpMethod
-//        request.httpBody = try! JSONSerialization.data(withJSONObject: [], options: .prettyPrinted)
-        
-        let result = try! await session.data(for: request)
-        return result
+        do {
+            let result = try await session.data(for: request)
+            let data = try decoder.decode(type, from: result.0)
+            return .success(data)
+        } catch {
+            return .failure(error )
+        }
     }
 }

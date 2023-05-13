@@ -26,7 +26,9 @@ class ArticlesListViewController: UIViewController {
             }
             
         }
-        viewModel.viewDidLoad()
+        Task {
+           await viewModel.viewDidLoad()
+        }
         
     }
     

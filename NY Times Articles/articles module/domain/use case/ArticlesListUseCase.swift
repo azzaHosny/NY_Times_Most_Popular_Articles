@@ -7,13 +7,18 @@
 
 import Foundation
 protocol ArticlesListUseCaseProtocol {
-    func buildArticlesList(repo: ArticlesListRepo, dayNum: Int)async -> Result<[ArticleUIModel], Error>
+    func buildArticlesList(repo: ArticlesListRepo, dayNum: ValidPeriod)async -> Result<[ArticleUIModel], Error>
 }
 
+enum ValidPeriod: Int {
+    case one = 1
+    case seven = 7
+    case thirty = 30
+}
 class ArticlesListUseCase: ArticlesListUseCaseProtocol {
     
-    func buildArticlesList(repo: ArticlesListRepo, dayNum: Int) async -> Result<[ArticleUIModel], Error> {
-        let result = await repo.getArticlesList(dayNum: dayNum)
+    func buildArticlesList(repo: ArticlesListRepo, dayNum: ValidPeriod) async -> Result<[ArticleUIModel], Error> {
+        let result = await repo.getArticlesList(dayNum: dayNum.rawValue)
         switch result {
         case .success(let articleRespons):
             return .success(Adapter.transfer(response: articleRespons))

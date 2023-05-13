@@ -19,7 +19,7 @@ class ArticlesListCoordinator: ArticlesListCoordinatorProtocol {
 
     func start() {
         let useCase = ArticlesListUseCase()
-        let repo = ArticlesListRepoImpl()
+        let repo = ArticlesListRepoImpl(decoder: CustomDecoder())
         let viewModel = ArticlesListViewModel(coordinator: self, repo: repo, useCase: useCase)
         let viewController = ArticlesListViewController.init(viewModel: viewModel)
         navigationController.pushViewController(viewController, animated: true)
