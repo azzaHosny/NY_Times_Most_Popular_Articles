@@ -13,6 +13,7 @@ class ArticlesListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.viewDidLoad()
     }
     
     init(viewModel: ArticlesListViewModel) {

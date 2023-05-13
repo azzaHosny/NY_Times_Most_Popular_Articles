@@ -7,5 +7,5 @@
 
 import Foundation
 protocol ArticlesListRepo {
-    
+    func getArticlesList(dayNum: Int) async  -> Result<ArticlesListResponse, Error >
 }
