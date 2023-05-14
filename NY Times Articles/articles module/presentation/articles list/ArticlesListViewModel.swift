@@ -39,4 +39,8 @@ class ArticlesListViewModel {
             }
         
     }
+    
+    func routToArticlesDetails(index: Int) {
+        coordinator.routToArticlesDetails(article: articlesList[index])
+    }
 }

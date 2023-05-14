@@ -33,7 +33,7 @@ final class ArticlesTests: XCTestCase {
     
 }
 
-class MockArticlesRepo: ArticlesListRepo {
+fileprivate class MockArticlesRepo: ArticlesListRepo {
     let isNetworkFailureu: Bool
     init(isNetworkFailureu: Bool = false) {
         self.isNetworkFailureu = isNetworkFailureu
@@ -72,6 +72,10 @@ class MockArticlesRepo: ArticlesListRepo {
 }
 
 class MockCoordinator: ArticlesListCoordinatorProtocol {
+    func routToArticlesDetails(article: ArticleUIModel) {
+        
+    }
+    
     func start() {
         
     }

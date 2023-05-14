@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ArticleDetailsViewController" customModule="ArticlesTests" customModuleProvider="target">
+            <connections>
+                <outlet property="abstarctLabel" destination="YCf-8u-g77" id="Azt-7S-f78"/>
+                <outlet property="articleUrlLabel" destination="U5z-Hh-THQ" id="cN0-gK-LUr"/>
+                <outlet property="titleLabel" destination="XPz-Le-FBd" id="aOM-ii-WnC"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="writerNameLabel" destination="HRG-Ki-Bfk" id="P3x-rM-ets"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2gZ-gq-a5u">
+                    <rect key="frame" x="0.0" y="59" width="375" height="608"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nyImage" translatesAutoresizingMaskIntoConstraints="NO" id="dwp-TW-AN5">
+                            <rect key="frame" x="137.66666666666666" y="30" width="100" height="100"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="2aD-fl-WH4"/>
+                                <constraint firstAttribute="height" constant="100" id="nok-Fx-x9m"/>
+                            </constraints>
+                        </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="lbt-qC-Wvk">
+                            <rect key="frame" x="20" y="198" width="335" height="212.33333333333337"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="She Wrote of Grief After Her Husband Died. Now She’s Charged in His Murder." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XPz-Le-FBd">
+                                    <rect key="frame" x="0.0" y="0.0" width="335" height="40.666666666666664"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCf-8u-g77">
+                                    <rect key="frame" x="0.0" y="60.666666666666693" width="335" height="95.666666666666686"/>
+                                    <string key="text">Kouri Richins wrote a children’s book to help her three sons process their father’s sudden death, she said. Prosecutors said this week that she poisoned him with a lethal dose of fentanyl</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="https://www.nytimes.com/2023/05/08/opinion/timothy-mcveigh-mass-shootings.html" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5z-Hh-THQ">
+                                    <rect key="frame" x="0.0" y="176.33333333333331" width="335" height="36"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <color key="textColor" name="AccentColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By Remy Tumin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRG-Ki-Bfk">
+                            <rect key="frame" x="135" y="140" width="105.33333333333331" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="dwp-TW-AN5" firstAttribute="top" secondItem="2gZ-gq-a5u" secondAttribute="top" constant="30" id="0xA-O5-opM"/>
+                        <constraint firstItem="lbt-qC-Wvk" firstAttribute="leading" secondItem="2gZ-gq-a5u" secondAttribute="leading" constant="20" id="8OW-Dx-gK6"/>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="lbt-qC-Wvk" secondAttribute="bottom" constant="20" id="UeN-t1-lOa"/>
+                        <constraint firstItem="HRG-Ki-Bfk" firstAttribute="top" secondItem="dwp-TW-AN5" secondAttribute="bottom" constant="10" id="VsI-Qe-bZV"/>
+                        <constraint firstItem="dwp-TW-AN5" firstAttribute="centerX" secondItem="2gZ-gq-a5u" secondAttribute="centerX" id="ZGI-E6-6fm"/>
+                        <constraint firstAttribute="trailing" secondItem="lbt-qC-Wvk" secondAttribute="trailing" constant="20" id="cSY-dp-H8f"/>
+                        <constraint firstItem="HRG-Ki-Bfk" firstAttribute="centerX" secondItem="2gZ-gq-a5u" secondAttribute="centerX" id="mAq-Oe-smx"/>
+                        <constraint firstItem="lbt-qC-Wvk" firstAttribute="top" secondItem="HRG-Ki-Bfk" secondAttribute="bottom" constant="40" id="xmF-Sk-MlH"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="2gZ-gq-a5u" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Je0-aQ-fo9"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="2gZ-gq-a5u" secondAttribute="bottom" id="YN7-ha-mfG"/>
+                <constraint firstItem="2gZ-gq-a5u" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="gx9-kN-JKs"/>
+                <constraint firstItem="2gZ-gq-a5u" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="sVe-tN-mCh"/>
+            </constraints>
+            <point key="canvasLocation" x="74" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="nyImage" width="219" height="230"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

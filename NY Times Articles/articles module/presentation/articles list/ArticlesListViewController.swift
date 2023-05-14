@@ -15,6 +15,7 @@ class ArticlesListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        self.title = "NY Times Most Popular Articles"
         viewModel.bindScreenStatusToViewController = { [weak self] result in
             switch result {
             case .loading:
@@ -32,12 +33,14 @@ class ArticlesListViewController: UIViewController {
         
     }
     
+  
+    
     private func showError(error: Error) {
-        
+        //Show Error
     }
     
     private func showLoader() {
-        
+        //show Loader
     }
     
     private func setupTableView() {
@@ -66,11 +69,12 @@ extension ArticlesListViewController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ArticleTableViewCell.identifier, for: indexPath) as! ArticleTableViewCell
         cell.configure(article: viewModel.articlesList[indexPath.row])
+        cell.selectionStyle = .none
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        viewModel.routToArticlesDetails(index: indexPath.row)
     }
     
 }
