@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArticleTableViewCell" rowHeight="188" id="KGk-i7-Jjw" customClass="ArticleTableViewCell" customModule="NY_Times_Articles" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArticleTableViewCell" rowHeight="188" id="KGk-i7-Jjw" customClass="ArticleTableViewCell" customModule="ArticlesTests" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="380" height="188"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -22,7 +22,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="14S-2m-1Pz">
                                 <rect key="frame" x="0.0" y="0.0" width="340" height="158"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8TO-Ib-qQV">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nyImage" translatesAutoresizingMaskIntoConstraints="NO" id="8TO-Ib-qQV">
                                         <rect key="frame" x="0.0" y="49" width="60" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="3qm-T1-Jea"/>
@@ -118,4 +118,7 @@
             <point key="canvasLocation" x="73.282442748091597" y="70.422535211267615"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="nyImage" width="219" height="230"/>
+    </resources>
 </document>
