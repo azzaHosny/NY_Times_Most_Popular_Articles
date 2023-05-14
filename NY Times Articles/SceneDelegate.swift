@@ -16,12 +16,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         let navigationController = UINavigationController()
-        UINavigationBar.appearance().barTintColor = .init(red: 23.0/255, green: 197.0/255, blue: 157.0/255, alpha: 1.0)
-        UINavigationBar.appearance().tintColor = .white
-        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor : UIColor.white,
-                                                            .font : UIFont.init(name: "AvenirNext-DemiBold", size: 22.0)!]
-        UINavigationBar.appearance().isTranslucent = false
-
         window.rootViewController = navigationController
         self.window = window
         ArticlesListCoordinator.init(navigationController: navigationController).start()

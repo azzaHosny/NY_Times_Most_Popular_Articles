@@ -11,7 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ArticleDetailsViewController" customModule="ArticlesTests" customModuleProvider="target">
             <connections>
+                <outlet property="abstarctLabel" destination="YCf-8u-g77" id="Azt-7S-f78"/>
+                <outlet property="articleUrlLabel" destination="U5z-Hh-THQ" id="cN0-gK-LUr"/>
+                <outlet property="titleLabel" destination="XPz-Le-FBd" id="aOM-ii-WnC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="writerNameLabel" destination="HRG-Ki-Bfk" id="P3x-rM-ets"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

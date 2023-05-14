@@ -11,7 +11,13 @@ class ArticleDetailsViewController: UIViewController {
     let viewModel: ArticleDetailsViewModel
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
     }
+    
+    @IBOutlet weak var articleUrlLabel: UILabel!
+    @IBOutlet weak var abstarctLabel: UILabel!
+    @IBOutlet weak var writerNameLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
     
     init(viewModel: ArticleDetailsViewModel) {
         self.viewModel = viewModel
@@ -23,7 +29,10 @@ class ArticleDetailsViewController: UIViewController {
     }
     
     private func setupView() {
-        
+        writerNameLabel.text = viewModel.article.byline
+        titleLabel.text = viewModel.article.title
+        abstarctLabel.text = viewModel.article.abstract
+        articleUrlLabel.text = viewModel.article.articleUrl
     }
     
 }

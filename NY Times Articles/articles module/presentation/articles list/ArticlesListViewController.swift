@@ -33,12 +33,14 @@ class ArticlesListViewController: UIViewController {
         
     }
     
+  
+    
     private func showError(error: Error) {
-        
+        //Show Error
     }
     
     private func showLoader() {
-        
+        //show Loader
     }
     
     private func setupTableView() {
